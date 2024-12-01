@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container2 {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+@media (min-width: 1400px) {
+    .container2 {
+        max-width: 1350px;
+    }
+}
+
+* {
+    transition: .2s;
+}
+
+.btn {
+    padding: 10px 25px;
+    border-radius: 6px;
+    @apply bg-1;
+    color: #fff;
+}
+
+.btn:hover {
+    background: #303ebd;
+}
+
+.btn:active {
+    transform: scale(.95);
+    transition: 0s;
+}
+
+#catalog+ul {
+    transition: .5s;
+}
+
+#catalog:checked+ul {
+    height: auto;
+}
+
+#nav:checked + nav {
+    left: 0;
+}
+
+#nav:checked ~ .blue-blur {
+    display: block;
+}
