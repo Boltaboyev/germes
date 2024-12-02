@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-1;
+}
+
 .container2 {
     max-width: 90%;
     margin: 0 auto;
@@ -37,14 +45,15 @@
     transition: .5s;
 }
 
-#catalog:checked+ul {
+#catalog:checked+ul,
+#filter:checked+div {
     height: auto;
 }
 
-#nav:checked + nav {
+#nav:checked+nav {
     left: 0;
 }
 
-#nav:checked ~ .blue-blur {
+#nav:checked~.blue-blur {
     display: block;
 }
